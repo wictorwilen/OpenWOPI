@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Assets/OpenWOPI.css" rel="stylesheet" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <script type="text/javascript" src="~/Scripts/jquery-1.9.1.min.js"></script>
+    @RenderSection("Scripts", required: false)
+    @RenderSection("StyleSheets", required: false)
+</head>
+<body>
+
+    <div id="topdiv">
+        
+        <div id="infobar" class="bar">
+            <img src="~/Assets/openwopilogo16.png" title="Open WOPI" alt="Open WOPI"/>
+            <span id="breadcrumb">
+                @RenderSection("Infobar", required: true)
+            </span>
+        </div>
+        <div id="toolbar" class="bar">
+            <div id="menu">
+                @RenderSection("Menu")
+            </div>
+        </div>
+
+    </div>
+    <div id="surface">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

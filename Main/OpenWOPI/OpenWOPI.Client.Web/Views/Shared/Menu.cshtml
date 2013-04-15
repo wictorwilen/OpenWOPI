@@ -1,0 +1,10 @@
+﻿@{
+    @model OpenWOPI.Core.OpenWOPIDocument
+}
+<ul>
+    @if (!Model.WebEditingDisabled)
+    {
+        <li><a href="@Model.HostEditUrl">EDIT</a></li>
+    }
+    <li><a href="@Model.BreadcrumbFolderUrl">Close</a></li>
+</ul>
