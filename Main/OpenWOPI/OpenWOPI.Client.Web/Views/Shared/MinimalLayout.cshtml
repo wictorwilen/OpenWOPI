@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Assets/OpenWOPI.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    @RenderSection("Scripts", required: false)
+    @RenderSection("StyleSheets", required: false)
+</head>
+<body>
+
+    <div id="topdiv" class="topdivmini">
+        <div id="infobar" class="bar"><nobr>
+            <img src="~/Assets/openwopilogo16.png" title="Open WOPI" alt="Open WOPI"/>
+            @RenderSection("Infobar", required: true)            
+            </nobr>
+        </div>
+    </div>
+    <div id="surface" style="height:auto">
+        @RenderBody()
+    </div>
+
+</body>
+</html>

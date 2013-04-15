@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OpenWOPI.Client.OpenWOPIAction">
+    <Position X="6.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAIAQAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>OpenWOPIAction.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Name" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OpenWOPI.Client.OpenWOPIActionAttribute">
+    <Position X="6.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAEAAAAAAAAAAAQAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>OpenWOPIActionAttribute.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Name" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OpenWOPI.Client.OpenWOPIApp">
+    <Position X="3.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIQAAAAAAACAAAAQAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OpenWOPIApp.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Actions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpenWOPI.Client.OpenWOPIAppAttribute">
+    <Position X="3.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAACAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OpenWOPIAppAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OpenWOPI.Client.OpenWOPIZone">
+    <Position X="0.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAEAAAAAAEAAAIAAAARAAIAAAAAgAAAAAAAAEAA=</HashCode>
+      <FileName>OpenWOPIZone.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Apps" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OpenWOPI.Core.OpenWOPIAccessToken">
+    <Position X="15.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="OpenWOPI.Core.OpenWOPIDocument">
+    <Position X="18.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="AccessToken" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OpenWOPI.Core.OpenWOPIProofKey">
+    <Position X="6.5" Y="7.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="OpenWOPI.Core.OpenWOPITextDocument">
+    <Position X="14.5" Y="7" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="OpenWOPI.Client.Mvc.OpenWOPIController">
+    <Position X="13" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAACAAgAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Mvc\OpenWOPIController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Theme" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OpenWOPI.Client.Mvc.OpenWOPIDocumentPostData">
+    <Position X="15.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mvc\OpenWOPIDocumentPostData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AccessToken" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OpenWOPI.Client.Mvc.OpenWOPIModel">
+    <Position X="18" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mvc\OpenWOPIModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="OpenWOPI.Client.OpenWOPIActionValues">
+    <Position X="9.75" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAABAAAAAAAAQAAAASIAAAAAAAQAAAAQACAggAIAI=</HashCode>
+      <FileName>OpenWOPIActionValues.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OpenWOPI.Core.OpenWOPITheme">
+    <Position X="13" Y="4" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

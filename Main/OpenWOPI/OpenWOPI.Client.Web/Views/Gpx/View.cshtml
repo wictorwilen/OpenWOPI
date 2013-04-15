@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Gpx Viewer";
+    @model OpenWOPI.Client.Web.Models.GpxDocument
+}
+@section Infobar {
+    @RenderPage("~/Views/Shared/Infobar.cshtml", Model)
+}
+@section Menu {
+    @RenderPage("~/Views/Shared/Menu.cshtml", Model)
+}
+@section Scripts {
+
+    <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0" charset="UTF-8"></script>
+    <script type="text/javascript">
+        var map;
+        function GetMap() {
+            // Initialize the map
+            map = new Microsoft.Maps.Map(document.getElementById("myMap"), null);
+
+            //Register and load the GPX Parser Module
+            Microsoft.Maps.registerModule("GPXParserModule", "/Scripts/GPXParserModule.js");
+            Microsoft.Maps.loadModule("GPXParserModule");
+        }
+
+        function LoadGPX(data) {
+            map.entities.clear();
+
+            //Define default shape options
+
+            var myTrackOptions = {
+                strokeColor: new Microsoft.Maps.Color(156, 0, 0, 255)
+            };
+
+            var myRouteOptions = {
+                strokeColor: new Microsoft.Maps.Color(156, 0, 0, 255)
+            };
+
+            var myPushpinOptions = {
+            };
+            new GPXParser().ParseXml('Content', GPXCallback, { pushpinOptions: myPushpinOptions, routeOptions: myRouteOptions, trackOptions: myTrackOptions });
+
+        }
+
+        function GPXCallback(items) {
+            map.entities.push(items);
+
+            //Advance functionalities can be added here such as adding event handlers.
+
+            //Set the map view
+            if (items.Metadata != null && items.Metadata.LocationRect != null) {
+                map.setView({ bounds: items.Metadata.LocationRect });
+                map.setView({
+                    bounds: Microsoft.Maps.LocationRect.fromLocations(
+                        new Microsoft.Maps.Location(items.Metadata.bounds.minlat, items.Metadata.bounds.minlon),
+                        new Microsoft.Maps.Location(items.Metadata.bounds.maxlat, items.Metadata.bounds.maxlon))});
+            }
+        }
+
+        $(document).ready(function () {
+            GetMap();
+            LoadGPX();
+        });
+    </script>
+}
+
+<div>
+    <div id='myMap' style="position: relative; width: 600px; height: 600px;"></div>
+    @Html.HiddenFor(f => f.Content)
+
+</div>

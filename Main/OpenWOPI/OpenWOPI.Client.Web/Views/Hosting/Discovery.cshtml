@@ -1,0 +1,29 @@
+﻿@{
+    Layout = ""; // override the view start
+    @model OpenWOPI.Client.Web.Models.OpenWOPIDiscoveryModel 
+}<?xml version="1.0" encoding="utf-8" ?>
+<wopi-discovery>
+    @foreach (var item in Model.Zones)
+    {
+        <net-zone name="@Html.DisplayFor(m => item.Name)">
+            @foreach (var app in item.Apps)
+            {
+                <app name="@Html.DisplayFor(a => app.Name)"
+                    favIconUrl="@(item.Protocol)://@(item.Internal? Model.InternalBaseUrl : Model.ExternalBaseUrl)@Html.DisplayFor(a => app.IconUrl)"
+                    checkLicense="@app.CheckLicense.ToString().ToLower()">
+                    @foreach (var action in app.Actions)
+                    {
+                        <action name="@Html.DisplayFor(ac => action.Name)"
+                                ext="@Html.DisplayFor(ac => action.Extension)"
+                                default="@action.Default.ToString().ToLower()"
+                                urlsrc="@(item.Protocol)://@(item.Internal? Model.InternalBaseUrl : Model.ExternalBaseUrl)@(action.UrlSource)" />
+                    }
+                </app>
+            }
+        </net-zone>
+    }
+  
+  <proof-key 
+      value="@Model.ProofKey.Proof" 
+      oldvalue="@Model.ProofKey.OldProof" />
+</wopi-discovery>

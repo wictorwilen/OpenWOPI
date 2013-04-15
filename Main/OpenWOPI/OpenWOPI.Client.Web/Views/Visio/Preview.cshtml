@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Visio Preview";
+    Layout = "~/Views/Shared/MinimalLayout.cshtml";
+    @model OpenWOPI.Client.Web.Models.VisioDocument
+}
+@section Infobar {
+    @RenderPage("~/Views/Shared/Infobar.cshtml", Model)
+}
+<div>
+<img src="/Media/Png/@Model.PngId" />
+</div>
