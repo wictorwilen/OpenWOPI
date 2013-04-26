@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Text Viewer";
+    @model OpenWOPI.Core.OpenWOPITextDocument
+}
+@section Infobar {
+    @RenderPage("~/Views/Shared/Infobar.cshtml", Model)
+}
+@section Menu {
+    @RenderPage("~/Views/Shared/Menu.cshtml", Model)
+}
+<div>
+    <pre>@Model.Content</pre>
+</div>
