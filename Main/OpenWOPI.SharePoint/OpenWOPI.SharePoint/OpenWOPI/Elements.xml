@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Control ControlAssembly="$SharePoint.Project.AssemblyFullName$" ControlClass="OpenWOPI.SharePoint.OpenWOPIJavaScriptRegistration" Id="AdditionalPageHead" Sequence="100"/>
+</Elements>

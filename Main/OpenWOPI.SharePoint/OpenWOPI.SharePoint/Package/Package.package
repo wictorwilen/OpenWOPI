@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="e9ab5344-3f59-495b-8170-921e4ccb37cb" solutionId="e9ab5344-3f59-495b-8170-921e4ccb37cb" resetWebServer="false" sharePointProductVersion="15.0" name="OpenWOPI.SharePoint" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="567f8bd7-f793-4099-92cd-ff15a670c948" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="120bf272-577d-4fb1-b7ca-e243276c9dd3" />
+  </projectItems>
+</package>
