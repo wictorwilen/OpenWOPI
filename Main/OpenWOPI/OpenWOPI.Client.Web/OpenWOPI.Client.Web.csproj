@@ -116,12 +116,14 @@
     <Compile Include="Controllers\GpxController.cs" />
     <Compile Include="Controllers\HostingController.cs" />
     <Compile Include="Controllers\MediaController.cs" />
+    <Compile Include="Controllers\TextAppController.cs" />
     <Compile Include="Controllers\VisioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\GpxModel.cs" />
     <Compile Include="Models\OpenWOPIDiscoveryModel.cs" />
+    <Compile Include="Models\TextAppModel.cs" />
     <Compile Include="Models\VisioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -155,6 +157,9 @@
     <Content Include="Views\Gpx\View.cshtml" />
     <Content Include="Views\Gpx\Preview.cshtml" />
     <Content Include="Views\Visio\Preview.cshtml" />
+    <Content Include="Views\TextApp\Edit.cshtml" />
+    <Content Include="Views\TextApp\Preview.cshtml" />
+    <Content Include="Views\TextApp\View.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

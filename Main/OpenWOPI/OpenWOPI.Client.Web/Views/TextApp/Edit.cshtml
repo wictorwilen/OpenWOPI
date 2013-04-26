@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Text Viewer";
+    @model OpenWOPI.Core.OpenWOPITextDocument
+    RouteValueDictionary queryStringDictionary = new RouteValueDictionary(Request.QueryString.AllKeys.ToDictionary(key => key, key => (object)Request.QueryString[key]));
+}
+@section Infobar {
+    @RenderPage("~/Views/Shared/Infobar.cshtml", Model)
+}
+@section Menu {
+    @RenderPage("~/Views/Shared/SaveMenu.cshtml", Model)
+}
+<div>
+
+
+    @using (Html.BeginForm("Save", "TextApp", queryStringDictionary, FormMethod.Post))
+    {
+        @Html.HiddenFor(d => d.AccessToken.access_token)
+        @Html.HiddenFor(d => d.AccessToken.access_token_ttl)
+        @Html.TextAreaFor(d => d.Content)
+    }
+</div>
